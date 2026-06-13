@@ -1,0 +1,347 @@
+:root {
+    --content-max-width: 900px;
+
+    --color-eggshell: #eeeeee;
+    --color-mustard: #fac526;
+    --color-vermilion: #e82356;
+    --color-foam: #e8d1a7;
+    --color-crema: #994400;
+    --color-coffee: #442211;
+    --color-sage: #bddbdb;
+    --color-emerald: #2f4842;
+    --color-lavender: #ccbbdd;
+    --color-grape: #4d3663;
+    --color-black: #111111;
+
+    --font-public-sans: "Public Sans", system-ui, Helvetica, Arial, sans-serif;
+    --font-larken: "Larken", Georgia, serif;
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-size-12: calc(var(--base-value) * 0.75);
+    --font-size-14: calc(var(--base-value) * 0.875);
+    --font-size-16: var(--base-value);
+    --font-size-32: calc(var(--base-value) * 2);
+    --font-size-48: calc(var(--base-value) * 3);
+    --font-size-80: calc(var(--base-value) * 5);
+    --font-size-128: calc(var(--base-value) * 8);
+
+    --font-xl-clamp: clamp(calc(var(--base-value) * 5), 18vw, var(--font-size-128));
+
+    --line-height-80: 80%;
+    --line-height-120: 120%;
+    --line-height-160: 160%;
+
+    --letter-spacing-normal: 0;
+    --letter-spacing-tight: -0.01em;
+    --letter-spacing-tighter: -0.03em;
+}
+
+html {
+    font-size: var(--base-value);
+}
+body {
+    background-color: var(--color-eggshell);
+}
+img {
+    padding: var(--spacing-100) 0;
+}
+/* 
+ *
+ *
+ * Typography
+ *
+ *
+ */
+.h1-xl-sans, .h1-xl-serif {
+    font-size: var(--font-xl-clamp);
+    line-height: var(--line-height-80);
+    margin: 0;
+}
+.h1-xl-sans {
+    font-family: var(--font-public-sans);
+    font-weight: 200;
+    letter-spacing: var(--letter-spacing-tighter);
+    text-transform: uppercase;
+}
+.h1-xl-serif {
+    font-family: var(--font-larken);
+    font-weight: 300;
+    letter-spacing: var(--letter-spacing-tight);
+}
+h1 {
+    font-family: var(--font-public-sans);
+    font-weight: 300;
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+h2 {
+    font-family: var(--font-larken);
+    font-weight: 300;
+    font-size: var(--font-size-48);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-tight);
+}
+h3 {
+    font-family: var(--font-larken);
+    font-weight: 300;
+    font-size: var(--font-size-32);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-tight);
+}
+p {
+    font-family: var(--font-public-sans);
+    line-height: var(--line-height-160);
+}
+p + p {
+    padding-top: var(--base-value);
+}
+p a, a {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-120);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 50%;
+    text-decoration-thickness: auto;
+    color: inherit;
+    transition: 0.3s all;
+}
+a:hover {
+    text-decoration-color: transparent;
+}
+/* 
+ *
+ *
+ * Background Color Pairs
+ *
+ *
+ */
+ .bg-sage {
+    background-color: var(--color-sage);
+    color: var(--color-emerald);
+ }
+ .bg-sage a:hover {
+    color: var(--color-vermilion);
+ }
+ .bg-coffee {
+    background-color: var(--color-coffee);
+    color: var(--color-crema);
+ }
+ .bg-coffee a:hover {
+    color: var(--color-mustard);
+ }
+ .bg-lavender {
+    background-color: var(--color-lavender);
+    color: var(--color-grape);
+ }
+ .bg-lavender a:hover {
+    color: var(--color-vermilion);
+ }
+ .bg-foam {
+    background-color: var(--color-foam);
+    color: var(--color-crema);
+ }
+ .bg-foam a:hover {
+    color: var(--color-vermilion);
+ }
+ .bg-black {
+    background-color: var(--color-black);
+    color: var(--color-eggshell);
+ }
+ .bg-black a:hover {
+    color: var(--color-mustard);
+ }
+/* 
+ *
+ *
+ * Background Monet Paintings
+ *
+ *
+ */
+ .bg-monet-garden {
+    background: linear-gradient(rgb(from var(--color-black) r g b / 0.20)), center / cover no-repeat url(../assets/paintings/the_artist_s_garden_in_argenteuil_a_corner_of_the_garden_with_dahlias_1991.27.1.jpg);
+    color: var(--color-eggshell);
+ }
+ .bg-monet-dinner {
+    background: linear-gradient(rgb(from var(--color-black) r g b / 0.33)), center / cover no-repeat url(../assets/paintings/interior_after_dinner_1983.1.26.jpg);
+    color: var(--color-eggshell);
+ }
+ .bg-monet-bridge {
+    background: linear-gradient(rgb(from var(--color-black) r g b / 0.33)), center / cover no-repeat url(../assets/paintings/the_bridge_at_argenteuil_1983.1.24.jpg);
+    color: var(--color-eggshell);
+ }
+ .bg-monet-flowers {
+    background: linear-gradient(rgb(from var(--color-black) r g b / 0.20)), center / cover no-repeat url(../assets/paintings/jerusalem_artichoke_flowers_1963.10.181.jpg);
+    color: var(--color-eggshell);
+ }
+/* 
+ *
+ *
+ * Phase 01
+ *
+ *
+ */
+.invite /* Phase 01 Save the Date hero graphic. */ {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100%;
+    color: var(--color-eggshell);
+}
+#invite-mobile {
+    display: block;
+}
+#invite-desktop {
+    display: none;
+}
+@media ( min-width: 48rem ) /* Tablet 768 */ {
+    #invite-mobile {
+        display: none !important;
+    }
+    #invite-desktop {
+        display: block !important;
+    }
+}
+.countdown {
+    text-align: center;
+    padding: var(--spacing-600) 0;
+}
+.countdown ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    align-items: center;
+}
+.countdown li {
+    display: inline-flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-family: var(--font-larken);
+    font-weight: 300;
+    font-size: var(--font-size-32);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-tight);
+    width: 10rem;
+}
+.countdown li span {
+    display: block;
+    font-family: var(--font-public-sans);
+    font-weight: 300;
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+@media ( min-width: 48rem ) /* Tablet 768 */ {
+    .countdown {
+        padding: var(--spacing-800) 0;
+    }
+    .countdown ul {
+        flex-direction: row;
+        gap: unset;
+        justify-content: space-between;
+    }
+}
+/* 
+ *
+ *
+ * Phase 02
+ *
+ *
+ */
+.hero /* Phase 02 hero. Will use a Monet painting until we have engagement photos to use instead. */ {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100%;
+}
+@media ( min-width: 64rem ) /* Laptop 1024 */ {
+    .hero img {
+        grid-column-start: 3;
+        padding-top: var(--spacing-400);
+    }
+}
+.deck {
+    text-align: center !important;
+    padding: var(--spacing-400) 0;
+}
+.deck .container {
+    border-top: 2px solid var(--color-black);
+}
+.deck a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-black);
+    margin: 0;
+    padding: var(--spacing-300) 0;
+    opacity: 0.30;
+    transition: all 0.6s;
+}
+.deck a:hover {
+    opacity: 1;
+}
+.deck a:hover h1 {
+    font-family: var(--font-larken) !important;
+    text-transform: none;
+    font-style: italic;
+}
+.deck #description {
+    text-transform: none !important;
+    display: none;
+}
+@media ( min-width: 64rem ) /* Laptop 1024 */ {
+    .deck #description {
+        display: block;
+    }
+    .deck a {
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+    }
+    .deck a.travel {
+        justify-content: flex-start;
+    }
+    .deck a.reverse {
+        flex-direction: row-reverse;
+        text-align: left !important;
+    }
+}
+.story {
+    text-align: left;
+    padding: var(--spacing-400) 0 !important;
+}
+.story .container {
+    border-top: 2px solid var(--color-emerald);
+    padding-top: var(--spacing-200);
+}
+/* 
+ *
+ *
+ * Footer styles (agnostic of phase).
+ *
+ *
+ */
+footer {
+    padding: var(--spacing-600) 0 var(--spacing-800) !important;
+}
+footer .container {
+    gap: var(--spacing-600);
+}
+footer #footer-logo-primary {
+    max-width: 300px;
+}
+footer #footer-logo-oval {
+    max-height: 200px;
+}
+footer .disclaimer {
+    font-size: var(--font-size-12);
+    color: var(--color-eggshell);
+    opacity: 0.5;
+    max-width: 55ch;
+}
