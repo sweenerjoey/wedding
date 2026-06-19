@@ -1,5 +1,5 @@
 :root {
-  --header-gradient: linear-gradient(rgb(from var(--color-black) r g b / 0.20) 0%, rgb(from var(--color-black) r g b / 0.0) 100%);
+    --header-gradient: linear-gradient(rgb(from var(--color-black) r g b / 0.33) 0%, rgb(from var(--color-black) r g b / 0.0) 100%);
 }
 header {
     position: fixed;
@@ -43,6 +43,7 @@ nav input[type="checkbox"]:not(:checked) + ul {
 .nav-logo {
     grid-column: 1;
     text-align: left;
+    pointer-events: all;
 }
 .nav-logo > img {
     max-width: 100px;
@@ -50,6 +51,9 @@ nav input[type="checkbox"]:not(:checked) + ul {
     opacity: 1;
     transition: all 0.3s;
     transform: translateY(0);
+}
+header.scrolled .nav-logo {
+    pointer-events: none;
 }
 header.scrolled .nav-logo > img {
     opacity: 0;
@@ -75,7 +79,7 @@ header.scrolled .nav-logo > img {
     display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) /* Laptop 1024 */ {
     header {
         padding-top: var(--spacing-300);
         position: absolute;
