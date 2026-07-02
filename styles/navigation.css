@@ -110,13 +110,13 @@ header.scrolled .nav-logo > img {
     }
     #nav-desktop-left {
         display: flex !important;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         grid-column: 1;
         gap: var(--spacing-600);
     }
     #nav-desktop-right {
         display: flex !important;
-        justify-content: flex-end;
+        justify-content: space-evenly;
         grid-column: 3;
         gap: var(--spacing-600);
     }
