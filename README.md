@@ -4,4 +4,4 @@ Repository for the files associated with [joeyandmegan.com](joeyandmegan.com), o
 
 Thanks for checking it out.
 
-![Interior After Dinner, Claude Monet, c. 1868.](/assets/paintings/interior_after_dinner_1983.1.26.jpg)
+![The Artist's Garden at Vétheuil, Claude Monet, c. 1881.](/assets/paintings/the_artist_s_garden_in_argenteuil_a_corner_of_the_garden_with_dahlias_1991.27.1.jpg)
