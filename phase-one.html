@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We're tying the knot! — Joey & Megan 2028</title>
+    <title>We're tying the knot! &mdash; Joey & Megan 2027</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,11 @@
     <main>
       <section class="block invite bg-monet-garden">
         <div class="container grid">
-          <img src="./assets/01_Invite_Mobile.svg" alt="It's finally time: Megan and Joey are tying the knot! Please save the date for XXXXXXX." id="invite-mobile" class="span-all">
-          <img src="./assets/01_Invite_Desktop.svg" alt="It's finally time: Megan and Joey are tying the knot! Please save the date for XXXXXXX." id="invite-desktop" class="md-span-all">
+          <picture class="span-all md-span-all">
+            <source media="(width < 48rem)" srcset="./assets/01_Invite_Mobile.svg">
+            <source media="(width >= 48rem)" srcset="./assets/01_Invite_Desktop.svg">
+            <img src="./assets/01_Invite_Mobile.svg" alt="It's finally time: Megan and Joey are tying the knot! Please save the date for XXXXXXX."class="span-all md-span-all">
+          </picture>
         </div>
       </section>
       <section class="block countdown bg-sage">
@@ -36,7 +39,7 @@
             </ul>
           </div>
           <div id="content" style="display: none;">
-            <h3>Thank you for celebrating<br>our special day with us!</h3>
+            <h3>Thank you for celebrating<br>our special day with us.</h3>
           </div>
         </div>
       </section>
@@ -44,7 +47,7 @@
     <footer class="block bg-coffee">
       <div class="container flex flex-col center">
         <img src="./assets/logos/JM_Primary_Crema.svg" alt="Joey and Megan, Ten Years in The Making." id="footer-logo-primary">
-        <p>WEBSITE BEING DESIGNED BY THE GROOM<br><i>(with approvals from the bride!)</i><br><br>#MeganAndJoey2028</p>
+        <p>WEBSITE BEING DESIGNED BY THE GROOM<br><i>(with approvals from the bride!)</i><br><br>#MeganAndJoey2027</p>
         <p class="disclaimer">The Artist's Garden in Argenteuil (A Corner of the Garden with Dahlias), Claude Monet, c. 1873. Courtesy National Gallery of Art, Washington.</p>
       </div>
     </footer>

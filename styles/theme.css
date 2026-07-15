@@ -13,7 +13,7 @@
     --color-grape: #4d3663;
     --color-black: #111111;
 
-    --font-public-sans: "Public Sans", system-ui, Helvetica, Arial, sans-serif;
+    --font-public-sans: "Public Sans", Helvetica, Arial, sans-serif;
     --font-larken: "Larken", Georgia, serif;
     --font-inter: "Inter", system-ui, sans-serif;
     --font-size-12: calc(var(--base-value) * 0.75);
@@ -193,20 +193,79 @@ a:hover {
     width: 100%;
     color: var(--color-eggshell);
 }
-#invite-mobile {
-    display: block;
+/* 
+ *
+ *
+ * Phase 02
+ *
+ *
+ */
+.hero /* Phase 02 hero. Uses a custom class for a Monet painting background, until we have engagement photos to use instead. */ {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100%;
 }
-#invite-desktop {
+@media ( min-width: 64rem ) /* Laptop 1024 */ {
+    .hero img {
+        grid-column-start: 3;
+        padding-top: var(--spacing-400);
+    }
+}
+.hub {
+    text-align: center !important;
+    padding: var(--spacing-400) 0;
+}
+.hub .container {
+    border-top: 2px solid var(--color-black);
+}
+.hub a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-black);
+    margin: 0;
+    padding: var(--spacing-300) 0;
+    opacity: 0.30;
+    transition: all 0.6s;
+}
+.hub #description {
+    text-transform: none !important;
     display: none;
 }
-@media ( min-width: 48rem ) /* Tablet 768 */ {
-    #invite-mobile {
-        display: none !important;
+@media ( min-width: 64rem ) /* Laptop 1024 */ {
+    .hub #description {
+        display: block;
     }
-    #invite-desktop {
-        display: block !important;
+    .hub a {
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+    }
+    .hub a.travel {
+        justify-content: flex-start;
+    }
+    .hub a.reverse {
+        flex-direction: row-reverse;
+        text-align: left !important;
     }
 }
+.story {
+    text-align: left;
+    padding: var(--spacing-400) 0 !important;
+}
+.story .container {
+    border-top: 2px solid var(--color-emerald);
+    padding-top: var(--spacing-200);
+}
+/* 
+ *
+ *
+ * Phase-agnostic styling.
+ *
+ *
+ */
 .countdown {
     text-align: center;
     padding: var(--spacing-600) 0;
@@ -246,99 +305,7 @@ a:hover {
         justify-content: space-between;
     }
 }
-/* 
- *
- *
- * Phase 02
- *
- *
- */
-.hero /* Phase 02 hero. Will use a Monet painting until we have engagement photos to use instead. */ {
-    display: flex;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    width: 100%;
-}
-@media ( min-width: 64rem ) /* Laptop 1024 */ {
-    .hero img {
-        grid-column-start: 3;
-        padding-top: var(--spacing-400);
-    }
-}
-.hub {
-    text-align: center !important;
-    padding: var(--spacing-400) 0;
-}
-.hub .container {
-    border-top: 2px solid var(--color-black);
-}
-.hub a {
-    text-decoration: none;
-    border-bottom: 2px solid var(--color-black);
-    margin: 0;
-    padding: var(--spacing-300) 0;
-    opacity: 0.30;
-    transition: all 0.6s;
-}
-@media (hover: hover) {
-    .hub a:hover, .hub a:focus, .hub a:active {
-        opacity: 1;
-    }
-    .hub a:hover h1, .hub a:focus h1, .hub a:active h1 {
-        font-family: var(--font-larken) !important;
-        text-transform: none;
-        font-style: italic;
-    }
-}
-@media (hover: none) {
-    .hub a:hover, .hub a:focus, .hub a:active {
-        opacity: 1;
-    }
-    .hub a:hover h1, .hub a:focus h1, .hub a:active h1 {
-        font-family: var(--font-larken) !important;
-        text-transform: none;
-        font-style: italic;
-    }
-}
-.hub #description {
-    text-transform: none !important;
-    display: none;
-}
-@media ( min-width: 64rem ) /* Laptop 1024 */ {
-    .hub #description {
-        display: block;
-    }
-    .hub a {
-        justify-content: space-between;
-        align-items: flex-end;
-        text-align: right;
-    }
-    .hub a.travel {
-        justify-content: flex-start;
-    }
-    .hub a.reverse {
-        flex-direction: row-reverse;
-        text-align: left !important;
-    }
-}
-.story {
-    text-align: left;
-    padding: var(--spacing-400) 0 !important;
-}
-.story .container {
-    border-top: 2px solid var(--color-emerald);
-    padding-top: var(--spacing-200);
-}
-/* 
- *
- *
- * Footer styles (agnostic of phase).
- *
- *
- */
+
 footer {
     padding: var(--spacing-600) 0 var(--spacing-800) !important;
 }
